@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            border: 2px solid #3498db;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 600px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        label input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            flex: 1;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        select[multiple] {
+            height: 80px;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+
+        .g-recaptcha {
+            margin-bottom: 10px;
+        }
+
+        /* Style buttons */
+        .btn {
+            background-color: #34db39;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .btn:hover {
+            background-color: #1b5a85;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>STUDENT REGISTRATION FORM</h2>
+        <form action="#" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name.." required><br>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name.." required><br>
+    
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label><br>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Your age.." required"><br>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your password" required"><br>
+    
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required"><br>
+    
+            <label for="phoneCode">Phone Number:</label>
+            <select id="code" name="PhoneCode" required>
+                <option value="+1">+1</option>
+                <option value="+91">+91</option>
+                <option value="+61">+61</option>
+                <option value="+9">+9</option>
+            </select>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required><br>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address here..." required></textarea><br>
+    
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required><br>
+    
+            <label for="pinCode">Pin Code:</label>
+            <input type="text" id="pinCode" name="pinCode" placeholder="Enter your pin code" required"><br>
+    
+            <label for="hobbies">Hobbies:</label>
+            <select id="hobbies" name="hobbies" required>
+                <option value="travel">Travel</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="movies">Movies</option>
+            </select><br>
+    
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required><br>
+            
+            <div class="checkbox">
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label for="declaration">I declare that the information provided is true</label>
+            </div>
+                
+            <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div><br>
+            
+            <div class="button">
+                <input type="submit" class="btn" value="Register">
+                <input type="reset"  class="btn" value="Reset">
+            </div>
+            
+        </form>
+    </div>
+
+    
+
+</body>
+</html>
